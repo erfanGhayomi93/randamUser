@@ -1,0 +1,119 @@
+@import "../base.scss";
+
+.images {
+  position: relative;
+  transition: all 0.5s ease-out;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+
+  &:hover .buttonNew {
+    display: block;
+    transition: all 2s ease;
+    -webkit-transition: all 2s ease;
+  }
+  .image {
+    border: 1px solid gray;
+    padding: 5px;
+    border-radius: 50%;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+  }
+  .buttonNew {
+    position: absolute;
+    padding: 10px 15px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 5px;
+    top: 140px;
+    left: calc(50% - 25px);
+    display: none;
+    cursor: pointer;
+  }
+}
+
+.detail {
+  margin: 30px;
+  p {
+    margin: 0;
+  }
+
+  .header {
+    font-size: 1.2em;
+    color: #6c757d;
+  }
+  .content {
+    font-size: 2em;
+    font-weight: 500;
+  }
+}
+
+
+.mouseEnter {
+  display: flex;
+  justify-content: center;
+  margin: 0 40px;
+  overflow: hidden;
+  .item {
+    padding: 10px 25px 0;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 2.5em;
+    position: relative;
+    top: 0;
+    transition: all 0.2s ease-out;
+    color: #d9d9d9;
+
+    &:hover{
+      top: -65px;
+      transition: all 0.2s ease-in;
+    }
+
+    .moveTop {
+      position: absolute;
+      top: 65px;
+      left: 0;
+      color: #83ba43;
+      padding: 10px 25px 0;
+    }
+
+    i {
+      content: "";
+      width: 40px;
+      height: 2px;
+      background-color: green;
+      position: absolute;
+      top: 3px;
+      left: calc(50% - 20px);
+      color: #83ba43;
+      display: block;
+      opacity: 1;
+      transition: all 0.2s ease;
+    }
+    i::before {
+      content: "";
+      width: 3px;
+      height: 3px;
+      background-color: green;
+      position: absolute;
+      top: -2px;
+      left: calc(50% - 2px);
+      transform: rotate(45deg);
+      color: #83ba43;
+    }
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .mouseEnter {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .detail {
+    margin: 5px;
+    .content {
+      font-size: 1.5em;
+    }
+  }
+}

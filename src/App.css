@@ -1,0 +1,27 @@
+.App {
+  min-height: 100vh;
+  background-color: blue;
+}
+.loading{
+  text-align: center;
+  padding-top: 100px;
+}
+.loading img{
+  width: 200px;
+  height: 200px;
+}
+.addedCard{
+  text-align: center;
+  margin-top: 10px;
+}
+.addedCard button{
+  background-color: aqua;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 1.3em;
+}
+.active {
+  top: -65px !important;
+  transition: all 0.2s ease-in;
+}
